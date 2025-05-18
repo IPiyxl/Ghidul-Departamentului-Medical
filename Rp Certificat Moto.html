@@ -2,194 +2,90 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Ghidul Departamentului Medical</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>RP CERTIFICAT MOTO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
-            font-weight: bold;
+            padding: 0;
+            background: #fff5f5;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(120deg, #fff 0%, #ffeaea 100%);
-            min-height: 100vh;
-            display: flex;
         }
-
-        .sidebar {
-            width: 340px;
-            min-width: 220px;
-            background: rgba(255,255,255,0.85);
-            color: #b71c1c;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2.5em 0 2em 0;
-            border-radius: 0 32px 32px 0;
-            box-shadow: 4px 0 24px rgba(183,28,28,0.10);
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-            z-index: 10;
-            backdrop-filter: blur(12px);
-            border-right: 2px solid #b71c1c33;
-        }
-
-        .sidebar-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            font-size: 1.3em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 2em;
-            background: #b71c1c;
-            color: #fff;
-            border-radius: 32px;
-            padding: 0.8em 1em;
-            box-shadow: 0 2px 12px rgba(183,28,28,0.13);
-            width: 180px;
-        }
-
-        .sidebar-title i {
-            font-size: 2em;
-            margin-bottom: 0.4em;
-            color: #fff;
-            filter: drop-shadow(0 0 6px #b71c1c88);
-        }
-
-        .sidebar-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        .sidebar-links a {
-            display: flex;
-            align-items: center;
-            gap: 0.8em;
-            background: #b71c1c;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.7em 1.2em;
-            border-radius: 1.2em;
-            font-size: 1.08em;
-            box-shadow: 0 2px 12px rgba(183,28,28,0.10);
-            transition: all 0.2s ease;
-        }
-
-        .sidebar-links a:hover, .sidebar-links a.active {
-            background: #fff;
-            color: #b71c1c;
-            border: 2px solid #b71c1c;
-            box-shadow: 0 4px 24px #b71c1c44;
-            transform: scale(1.07);
-        }
-
-        .sidebar-links a i {
-            min-width: 1.3em;
-            text-align: center;
-            font-size: 1.1em;
-            opacity: 0.85;
-        }
-
-        @media (max-width: 800px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100vw;
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 1em;
-                border-radius: 0 0 40px 40px;
-                border-right: none;
-                border-bottom: 2px solid #b71c1c;
-            }
-            .sidebar-title {
-                flex-direction: row;
-                font-size: 1em;
-                padding: 0.7em;
-                margin-bottom: 0;
-                gap: 0.5em;
-            }
-            .sidebar-links {
-                flex-direction: row;
-                gap: 0.5em;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .sidebar-links a {
-                font-size: 0.95em;
-                padding: 0.5em 0.8em;
-                white-space: nowrap;
-            }
-        }
-
-        .content {
-            flex: 1;
-            padding: 3em 2em;
-            text-align: center;
-        }
-
         .intro-section {
-    max-width: 900px;
-    margin: 2em auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+        }
+        .intro-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .intro-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+        .intro-header h1 {
+            font-size: 2.2rem;
+            color: #c62828;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        .intro-box {
+            justify-content: center;
+            text-align: center;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 2px 16px #b71c1c22;
-    padding: 2em 2.5em;
+    box-shadow: 0 4px 24px 0 rgba(198,40,40,0.08);
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 800px;
+    border-left: 6px solid #c62828;
+    border-right: 6px solid #c62828;
+    background: #fae1e1;
 }
-.intro-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    background: #b71c1c;
-    color: #fff;
-    border-radius: 12px;
-    padding: 1em 0;
-    margin-bottom: 2em;
-}
-.intro-header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-.intro-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-.intro-box {
-    background: #f7f7f7;
-    border-radius: 10px;
-    margin-bottom: 1.5em;
-    padding: 1.2em 1.5em;
-    border-left: 8px solid #b71c1c;
-}
-.intro-box.highlight {
-    background: #ffeaea;
-    border-left: 8px solid #b71c1c;
-}
-.intro-box.extra {
-    background: #eee;
-    border-left: 8px solid #444;
-}
-.intro-box h2 {
-    margin-top: 0;
-    color: #b71c1c;
-    font-size: 1.3em;
-}
-.intro-box ul {
-    margin: 0.5em 0 0 1.2em;
-    padding: 0;
-}
-.intro-box li {
-    margin-bottom: 0.5em;
-    font-size: 1.05em;
-}
+        .intro-box.highlight {
+            border-left: 6px solid #c62828;
+            background: #fff8f8;
+        }
+        .intro-box.extra {
+            background: #fffbe9;
+            border-left: 6px solid #ffb300;
+            border-right: 6px solid #ffb300;
+        }
+        .intro-box h2 {
+            margin-top: 0;
+            color: #c62828;
+            font-size: 1.3rem;
+        }
+        .intro-box ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .intro-box li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        @media (max-width: 700px) {
+            .intro-box, .intro-header {
+                max-width: 95vw;
+                padding: 16px 8px;
+            }
+            .intro-logo {
+                width: 48px;
+                height: 48px;
+            }
+            .intro-header h1 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>

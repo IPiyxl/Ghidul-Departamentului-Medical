@@ -2,69 +2,109 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>ROLEPLAY SPITAL</title>
+    <title>RP SPITAL</title>
     <style>
-        body {
-            background: #e3e9f2;
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        .rp-container {
-            max-width: 1800px;
-            margin: 0 auto;
-            border: 12px solid #0d1623;
-            background: #e3e9f2;
-        }
-        .rp-header {
-            background: #b71c1c;
-            color: #fff;
-            text-align: center;
-            padding: 1.2em 0 0.7em 0;
-            font-size: 2.7em;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-        .rp-section {
-            margin: 2em 0 0 0;
-        }
-        .rp-title {
-            background: #7a2b17;
-            color: #fff;
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            padding: 0.4em 0;
-            border-bottom: 4px solid #0d1623;
-            letter-spacing: 1px;
-        }
-        .rp-list {
+html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            border-collapse: collapse;
-            width: 100%;
+            background: #fff5f5;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
-        .rp-list tr {
-            border-bottom: 1px solid #222;
+        .intro-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
         }
-        .rp-list td {
+        .intro-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .intro-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+        .intro-header h1 {
+            font-size: 2.2rem;
+            color: #c62828;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        .intro-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 0.3em 0;
-            font-size: 1.15em;
-            background: #e3e9f2;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(198,40,40,0.08);
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 800px;
+    border-left: 6px solid #c62828;
+    border-right: 6px solid #c62828;
+    background: #fae1e1;
+}
+        .intro-box.highlight {
+            border-left: 6px solid #c62828;
+            background: #fff8f8;
         }
-        @media (max-width: 900px) {
-            .rp-header { font-size: 1.3em; }
-            .rp-title { font-size: 1.1em; }
-            .rp-container { border-width: 4px; }
+        .intro-box.extra {
+            background: #fffbe9;
+            border-left: 6px solid #ffb300;
+            border-right: 6px solid #ffb300;
+        }
+        .intro-box h2 {
+            margin-top: 0;
+            color: #c62828;
+            font-size: 1.3rem;
+        }
+        .intro-box ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .intro-box li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .intro-box table,
+.intro-box td,
+.intro-box th {
+    text-align: center;
+}
+        @media (max-width: 700px) {
+            .intro-box, .intro-header {
+                max-width: 95vw;
+                padding: 16px 8px;
+            }
+            .intro-logo {
+                width: 48px;
+                height: 48px;
+            }
+            .intro-header h1 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="rp-container">
-        <div class="rp-header">ROLEPLAY SPITAL</div>
+    <div class="intro-section">
+        <div class="intro-header">
+            <img src="logo-fivem.png" alt="Logo stânga" class="intro-logo">
+            <h1>RP Spital</h1>
+            <img src="medicihrteam.png" alt="Logo dreapta" class="intro-logo" style="transform: scaleX(-1);">
+        </div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP DE INTERNARE</div>
+        <div class="intro-box">
+            <h2>RP DE INTERNARE</h2>
             <table class="rp-list">
                 <tr><td>* îi ceri buletinul *</td></tr>
                 <tr><td>/me ia buletinul</td></tr>
@@ -78,8 +118,8 @@
             </table>
         </div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP DE SALON</div>
+        <div class="intro-box">
+            <h2>RP DE SALON</h2>
             <table class="rp-list">
                 <tr><td>/me își pune mănușile de protecție</td></tr>
                 <tr><td>* /e mechanic *</td></tr>
@@ -96,8 +136,9 @@
             </table>
         </div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP DURERI DE SPATE</div>
+        <!-- Repetă structura pentru fiecare secțiune, doar cu .intro-box și <h2> pentru titlu -->
+        <div class="intro-box">
+            <h2>RP DURERI DE SPATE</h2>
             <table class="rp-list">
                 <tr><td>/me examinează pacientul</td></tr>
                 <tr><td>/me scoate din geantă un corset pentru spate</td></tr>
@@ -109,8 +150,8 @@
             </table>
         </div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP ANTITETANOS</div>
+        <div class="intro-box">
+            <h2>RP ANTITETANOS</h2>
             <table class="rp-list">
                 <tr><td>/me examinează rana</td></tr>
                 <tr><td>/me scoate din geantă betadina și tifoane sterile</td></tr>
@@ -123,88 +164,89 @@
             </table>
         </div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP ARSURI SPITAL</div>
-            <table class="rp-list">
-                <tr><td>*Dacă persoană are haine lungi care acoperă membrele*</td></tr>
-                <tr><td>/me ia pensă sterilă din sertar</td></tr>
-                <tr><td>/me îndepărtează ușor părțile textile de pe arsura</td></tr>
-                <tr><td>*Dacă arsura e direct pe piele*</td></tr>
-                <tr><td>/me ia din geantă (specificam crema pe care o folosim) crema pentru arsuri</td></tr>
-                <tr><td>/me intinde crema pe toata partea cu arsuri</td></tr>
-                <tr><td>*Se recomandă medicamente precum Ketonal/Tador - Pentru durere*</td></tr>
-                <tr><td>*Se recomandă creme precum Dermazin - Crema, Regen agen - Crema, Cicatrol- Crema*</td></tr>
-            </table>
-        </div>
+        <!-- Înlocuiește fiecare rp-section cu intro-box și rp-title cu h2 -->
 
-        <div class="rp-section">
-            <div class="rp-title">RP RADIOGRAFIE</div>
-            <table class="rp-list">
-                <tr><td>* te duci în camera de RADIOLOGIE*</td></tr>
-                <tr><td>* îl rogi să și dea jos toate accesoriile (inel, cercei, lanț etc) și hainele *</td></tr>
-                <tr><td>* îl rogi să se așeze întins pe pat, cu animația /e passout3 *</td></tr>
-                <tr><td>* îl rogi să stea nemișcat până la captarea imaginii*</td></tr>
-                <tr><td>* te duci în cealaltă camera .. *</td></tr>
-                <tr><td>/me pornește aparatul cu raze X</td></tr>
-                <tr><td>/me pornește scanarea</td></tr>
-                <tr><td>/me verifică rezultatele pe calculator</td></tr>
-                <tr><td>/me printează rezultatele</td></tr>
-                <tr><td>* /e clipboard și te duci la el și îi spui dacă are ceva rupt sau nu *</td></tr>
-            </table>
-        </div>
+<div class="intro-box">
+    <h2>RP ARSURI SPITAL</h2>
+    <table class="rp-list">
+        <tr><td>*Dacă persoană are haine lungi care acoperă membrele*</td></tr>
+        <tr><td>/me ia pensă sterilă din sertar</td></tr>
+        <tr><td>/me îndepărtează ușor părțile textile de pe arsura</td></tr>
+        <tr><td>*Dacă arsura e direct pe piele*</td></tr>
+        <tr><td>/me ia din geantă (specificam crema pe care o folosim) crema pentru arsuri</td></tr>
+        <tr><td>/me intinde crema pe toata partea cu arsuri</td></tr>
+        <tr><td>*Se recomandă medicamente precum Ketonal/Tador - Pentru durere*</td></tr>
+        <tr><td>*Se recomandă creme precum Dermazin - Crema, Regen agen - Crema, Cicatrol- Crema*</td></tr>
+    </table>
+</div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP VERIFICARE TEMPERATURĂ</div>
-            <table class="rp-list">
-                <tr><td>/me scoate din geantă pistolul cu laser pentru temperatura</td></tr>
-                <tr><td>/me îi pune laserul pe frunte</td></tr>
-                <tr><td>/me observă temperatura : 35-37 ( între 35 și 37 cât vreți voi )</td></tr>
-                <tr><td>*să nu depăsească 37 pentru că este necesar roleplay*</td></tr>
-                <tr><td>*dacă vor rp minim cu febra între 37-38.2 îi administrați nurofen/paracetamol pastile pt a-i scădea febra*</td></tr>
-            </table>
-        </div>
+<div class="intro-box">
+    <h2>RP RADIOGRAFIE</h2>
+    <table class="rp-list">
+        <tr><td>* te duci în camera de RADIOLOGIE*</td></tr>
+        <tr><td>* îl rogi să și dea jos toate accesoriile (inel, cercei, lanț etc) și hainele *</td></tr>
+        <tr><td>* îl rogi să se așeze întins pe pat, cu animația /e passout3 *</td></tr>
+        <tr><td>* îl rogi să stea nemișcat până la captarea imaginii*</td></tr>
+        <tr><td>* te duci în cealaltă camera .. *</td></tr>
+        <tr><td>/me pornește aparatul cu raze X</td></tr>
+        <tr><td>/me pornește scanarea</td></tr>
+        <tr><td>/me verifică rezultatele pe calculator</td></tr>
+        <tr><td>/me printează rezultatele</td></tr>
+        <tr><td>* /e clipboard și te duci la el și îi spui dacă are ceva rupt sau nu *</td></tr>
+    </table>
+</div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP VERIFICARE TENSIUNE</div>
-            <table class="rp-list">
-                <tr><td>/me scoate din geantă tensiometrul</td></tr>
-                <tr><td>/me îl montează pe brațul stâng</td></tr>
-                <tr><td>/me pornește aparatul</td></tr>
-                <tr><td>/me observă tensiunea : (între 11 și 14) cu (între 6 cu 9) exemplu : /me observă tensiunea : 13 cu 7</td></tr>
-                <tr><td>*după care îl întrebați căți ani are, să zicem că zice 20, o să-i spui că pentru vârsta să e o tensiune foarte bună *</td></tr>
-                <tr><td>*în caz de tensiune mare*</td></tr>
-                <tr><td>/me se administrează 2mg/furosemid intravenos</td></tr>
-            </table>
-        </div>
+<div class="intro-box">
+    <h2>RP VERIFICARE TEMPERATURĂ</h2>
+    <table class="rp-list">
+        <tr><td>/me scoate din geantă pistolul cu laser pentru temperatura</td></tr>
+        <tr><td>/me îi pune laserul pe frunte</td></tr>
+        <tr><td>/me observă temperatura : 35-37 ( între 35 și 37 cât vreți voi )</td></tr>
+        <tr><td>*să nu depăsească 37 pentru că este necesar roleplay*</td></tr>
+        <tr><td>*dacă vor rp minim cu febra între 37-38.2 îi administrați nurofen/paracetamol pastile pt a-i scădea febra*</td></tr>
+    </table>
+</div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP ANALIZE DE SÂNGE</div>
-            <table class="rp-list">
-                <tr><td>/me își pune mănușile chirurgicale</td></tr>
-                <tr><td>/me scoate din sertar o seringă cu ac steril și eprubetele</td></tr>
-                <tr><td>/me scoate din sertar un garou și strage antebrațul</td></tr>
-                <tr><td>/me introduce seringă în venă și extrage 100 ml sânge</td></tr>
-                <tr><td>/me eticheteaza sângele cu numele domnului</td></tr>
-                <tr><td>/me îi da garoul jos</td></tr>
-                <tr><td>/me duce eprubetele cu sânge în laborator</td></tr>
-                <tr><td>/me testează proba de sânge</td></tr>
-                <tr><td>/me scoate analizele de sânge la imprimantă</td></tr>
-                <tr><td>/me îi da fișa cu analize</td></tr>
-            </table>
-        </div>
+<div class="intro-box">
+    <h2>RP VERIFICARE TENSIUNE</h2>
+    <table class="rp-list">
+        <tr><td>/me scoate din geantă tensiometrul</td></tr>
+        <tr><td>/me îl montează pe brațul stâng</td></tr>
+        <tr><td>/me pornește aparatul</td></tr>
+        <tr><td>/me observă tensiunea : (între 11 și 14) cu (între 6 cu 9) exemplu : /me observă tensiunea : 13 cu 7</td></tr>
+        <tr><td>*după care îl întrebați căți ani are, să zicem că zice 20, o să-i spui că pentru vârsta să e o tensiune foarte bună *</td></tr>
+        <tr><td>*în caz de tensiune mare*</td></tr>
+        <tr><td>/me se administrează 2mg/furosemid intravenos</td></tr>
+    </table>
+</div>
 
-        <div class="rp-section">
-            <div class="rp-title">RP RECOLTARE DE SANGE</div>
-            <table class="rp-list">
-                <tr><td>/me își pune mănușile chirurgicale</td></tr>
-                <tr><td>/me scoate din sertar o seringă cu ac steril și eprubetele</td></tr>
-                <tr><td>/me scoate din sertar un garou și strage antebrațul</td></tr>
-                <tr><td>/me introduce acul și extrage 450 ml de sânge</td></tr>
-                <tr><td>/me eticheaza sângele cu numele pacientului</td></tr>
-                <tr><td>/me îi da garoul jos</td></tr>
-                <tr><td>/me duce eprubetele în lada frigorifică</td></tr>
-            </table>
-        </div>
-    </div>
+<div class="intro-box">
+    <h2>RP ANALIZE DE SÂNGE</h2>
+    <table class="rp-list">
+        <tr><td>/me își pune mănușile chirurgicale</td></tr>
+        <tr><td>/me scoate din sertar o seringă cu ac steril și eprubetele</td></tr>
+        <tr><td>/me scoate din sertar un garou și strage antebrațul</td></tr>
+        <tr><td>/me introduce seringă în venă și extrage 100 ml sânge</td></tr>
+        <tr><td>/me eticheteaza sângele cu numele domnului</td></tr>
+        <tr><td>/me îi da garoul jos</td></tr>
+        <tr><td>/me duce eprubetele cu sânge în laborator</td></tr>
+        <tr><td>/me testează proba de sânge</td></tr>
+        <tr><td>/me scoate analizele de sânge la imprimantă</td></tr>
+        <tr><td>/me îi da fișa cu analize</td></tr>
+    </table>
+</div>
+
+<div class="intro-box">
+    <h2>RP RECOLTARE DE SÂNGE</h2>
+    <table class="rp-list">
+        <tr><td>/me își pune mănușile chirurgicale</td></tr>
+        <tr><td>/me scoate din sertar o seringă cu ac steril și eprubetele</td></tr>
+        <tr><td>/me scoate din sertar un garou și strage antebrațul</td></tr>
+        <tr><td>/me introduce acul și extrage 450 ml de sânge</td></tr>
+        <tr><td>/me eticheaza sângele cu numele pacientului</td></tr>
+        <tr><td>/me îi da garoul jos</td></tr>
+        <tr><td>/me duce eprubetele în lada frigorifică</td></tr>
+    </table>
+</div>
 </body>
 </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Departamentul Medical Viceroy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --main-red: #c62828;
+            --main-red-dark: #8e0000;
+            --main-red-light: #ff5252;
+            --sidebar-bg: #fff;
+            --sidebar-border: #ffeaea;
+            --sidebar-link: #c62828;
+            --sidebar-link-hover: #fff;
+            --sidebar-link-bg-hover: #c62828;
+            --sidebar-link-active: #fff;
+            --sidebar-link-bg-active: #b71c1c;
+            --content-bg: #fff5f5;
+            --shadow: 0 4px 24px 0 rgba(198,40,40,0.08);
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--content-bg);
+            color: #222;
+        }
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 2px solid var(--sidebar-border);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    overflow: hidden; /* ascunde scrollbarul */
+}
+        .sidebar-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 28px 24px 18px 24px;
+            border-bottom: 1px solid var(--sidebar-border);
+            background: var(--main-red);
+            color: #fff;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px 0 rgba(198,40,40,0.07);
+        }
+        .sidebar-title i {
+            font-size: 1.7rem;
+            color: #fff;
+        }
+.sidebar-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centrează vertical */
+    padding: 0;
+}
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px; /* mai puțin padding */
+    color: var(--sidebar-link);
+    text-decoration: none;
+    font-size: 1.02rem;
+    border-left: 4px solid transparent;
+    border-radius: 24px;
+    margin: 2px 8px; /* mai puțin spațiu între linkuri */
+    transition: 
+        background 0.18s, 
+        color 0.18s, 
+        border-color 0.18s,
+        box-shadow 0.18s;
+    cursor: pointer;
+    font-weight: 500;
+    word-break: break-word;
+    min-height: 38px; /* mai mic */
+}
+        .sidebar-links a:hover {
+    background: var(--sidebar-link-bg-hover);
+    color: var(--sidebar-link-hover);
+    border-left: 4px solid var(--main-red-light);
+    box-shadow: 0 2px 12px 0 rgba(198,40,40,0.13);
+    transform: translateX(4px) scale(1.03);
+}
+.sidebar-links a.active {
+    background: var(--sidebar-link-bg-active);
+    color: var(--sidebar-link-active);
+    border-left: 4px solid var(--main-red-light);
+    box-shadow: 0 2px 16px 0 rgba(198,40,40,0.18);
+    transform: translateX(6px) scale(1.05);
+}
+        .sidebar-links i {
+            min-width: 22px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 40px 48px;
+            min-height: 100vh;
+            background: var(--content-bg);
+            box-sizing: border-box;
+            transition: background 0.2s;
+        }
+        @media (max-width: 800px) {
+            .sidebar {
+                width: 60px;
+            }
+            .sidebar-title div {
+                display: none;
+            }
+            .sidebar-links a {
+                padding: 13px 10px;
+                justify-content: center;
+                border-radius: 50%;
+            }
+            .content {
+                margin-left: 60px;
+                padding: 24px 10px;
+            }
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #ffeaea;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffcdd2;
+            border-radius: 8px;
+        }
+.sidebar-logo {
+    height: 70px;
+    width: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.07));
+    object-fit: contain;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+<div class="sidebar-title">
+    <img src="output-onlinepngtools.png" alt="Viceroy" class="sidebar-logo">
+</div>
+        <div class="sidebar-links" id="sidebarLinks">
+            <a onclick="loadSection('Introducere.html', this)" class="active"><i class="fa-solid fa-house-medical"></i>Introducere</a>
+                        <a onclick="loadSection('Regulamentul Departamentului.html', this)" class="active"><i class="fa-solid fa-stethoscope"></i>Regulament Intern</a>
+            <a onclick="loadSection('GhidJaf.html', this)"><i class="fa-solid fa-user-nurse"></i>Ghid Jaf</a>
+            <a onclick="loadSection('Rp Spital.html', this)"><i class="fa-solid fa-hospital"></i>Rp Spital</a>
+            <a onclick="loadSection('CoduriRadio.html', this)"><i class="fa-solid fa-headset"></i>Coduri Radio</a>
+            <a onclick="loadSection('Medicamente,Echipamente.html', this)"><i class="fa-solid fa-pills"></i>Medicamente/Echipamente</a>
+            <a onclick="loadSection('Rp Teren, Cert BLS.html', this)"><i class="fa-solid fa-truck-medical"></i>Rp. Teren/Cert. BLS</a>
+            <a onclick="loadSection('Rp S.M.U.L.S., CERT. S.M.U.L.S.html', this)"><i class="fa-solid fa-user-doctor"></i>Rp S.M.U.L.S., CERT. S.M.U.L.S.</a>
+            <a onclick="loadSection('Rp Operatii.html', this)"><i class="fa-solid fa-heart-pulse"></i>Rp. Operatii</a>
+            <a onclick="loadSection('Rezidentiat.html', this)"><i class="fa-solid fa-graduation-cap"></i>Rezidentiat</a>
+            <a onclick="loadSection('Rp Certificat Moto.html', this)"><i class="fa-solid fa-motorcycle"></i>Rp. Certificat Moto</a>
+            <a onclick="loadSection('I.S.U.L.S..html', this)"><i class="fa-solid fa-fire-extinguisher"></i>I.S.U.L.S.</a>
+            <a onclick="loadSection('Certificat Pilot.html', this)"><i class="fa-solid fa-plane"></i>Certificat Pilot</a>
+        </div>
+    </div>
+    <div id="main-content" class="content"></div>
+    <script>
+        function setActiveLink(el) {
+            document.querySelectorAll('.sidebar-links a').forEach(a => a.classList.remove('active'));
+            if (el) el.classList.add('active');
+        }
+
+        function loadSection(filename, el) {
+            setActiveLink(el);
+            fetch(filename)
+                .then(response => {
+                    if (!response.ok) throw new Error();
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('main-content').innerHTML = html;
+                })
+                .catch(() => {
+                    document.getElementById('main-content').innerHTML = '<p style="color:#b71c1c">Nu s-a putut încărca secțiunea.</p>';
+                });
+        }
+
+        window.onload = function() {
+            loadSection('Introducere.html', document.querySelector('.sidebar-links a'));
+        }
+    </script>
+</body>
+</html>
